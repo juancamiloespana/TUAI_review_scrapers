@@ -43,9 +43,32 @@ AND
 ("loattrfree full text"[Filter]))\
 """
 
+
+search_string="""(("Decision Support Systems, Clinical"[MeSH Terms] OR
+  "clinical decision support system*"[Title/Abstract] OR
+  "CDSS*"[Title/Abstract])
+AND
+( "large language*"[Title/Abstract] or "LLM*"[Title/Abstract])
+AND
+("2010"[Date - Publication] : "2025"[Date - Publication])
+AND
+(English[Language])
+AND
+("loattrfree full text"[Filter]))\
+"""
+
 output_filename = "pubmed_results.csv"
 failed_pmids_file = "failed_pmids.txt"
 max_results = 2000
+
+
+
+fetch = PubMedFetcher(email=email)
+print(f"Searching PubMed with retmax={max_results}...")
+
+
+pmids = fetch.pmids_for_query(search_string, retmax=max_results)
+print(f"Query successful. Found {len(pmids)} PMIDs to process.")
 
 
 
@@ -105,3 +128,18 @@ try:
 
 except Exception as e:
     print(f"An error occurred during the initial search: {e}")
+
+
+
+#### consultar por pmid
+
+pmid="40925145"
+fetch = PubMedFetcher(email=email)
+article = fetch.article_by_pmid(pmid)
+
+article.year
+article.pub
+article.title
+article.mesh
+article.publication_types
+article.

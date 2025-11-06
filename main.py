@@ -50,5 +50,9 @@ if __name__ == "__main__":
 
 import pandas as pd
 import openpyxl
+import joblib
 df = pd.DataFrame(list_articles, columns=config.CSV_HEADER)
-df.to_excel("pubmed_results.xlsx", index=False)
+df.to_excel("outputs/pubmed_results.xlsx", index=False)
+joblib.dump(list_articles, "outputs/pubmed_results.pkl")
+
+df[df['Abstract']=='']

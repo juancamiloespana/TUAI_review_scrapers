@@ -8,19 +8,12 @@ This is the only file you should need to edit for new searches.
 SEARCH_QUERY = """
 ((
   "Decision Support Systems, Clinical"[MeSH Terms] OR
-  "clinical decision support*"[Title/Abstract] OR
-  "CDS"[Title/Abstract]
+  "clinical decision support system*"[Title/Abstract] OR
+  "CDSS"[Title/Abstract]
 )
 AND
 (
-  "recommender system*"[Title/Abstract] OR
-  "recommendation system*"[Title/Abstract] OR
-  "large language model*"[Title/Abstract] OR
-  "multi-agent system*"[Title/Abstract] OR
-  "multiagent system*"[Title/Abstract] OR
-  "multi agent system*"[Title/Abstract] OR
-  "trustworthy AI"[Title/Abstract] OR
-  "explainable AI"[Title/Appstract]
+  "large language*"[Title/Abstract] or "LLM*"[Title/Abstract]
 )
 AND
 (
@@ -56,5 +49,6 @@ CSV_HEADER = [
     'Abstract',
     'URL',
     'bibtex',
+    'Pub_type'
 
 ]

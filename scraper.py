@@ -60,8 +60,8 @@ class PubMedScraper:
                     article.keywords or '',
                     article.abstract or '',
                     article.url or '',
-                    article.citation_bibtex or ''
-                    
+                    article.citation_bibtex or '',
+                    article.publication_types or ''
                 ]
 
     def run_search_and_save(self, query: str, max_results: int, output_file: str, failed_file: str):
