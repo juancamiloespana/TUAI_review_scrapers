@@ -55,12 +55,12 @@ def analyze_abstracts(list_articles):
                     "type": "OBJECT",
                     "description": "Object containing binary flags (0 or 1) for each exclusion reason.",
                     "properties": {
-                        "is_genomic": { "type": "INTEGER" },
+                     s   "is_genomic": { "type": "INTEGER" },
                         "is_mental_health": { "type": "INTEGER" },
                         "is_dentistry": { "type": "INTEGER" },
                         "is_pediatric": { "type": "INTEGER" },
                         "is_cadaver": { "type": "INTEGER" },
-                        "is_non_research": { "type": "INTEGER" },
+                        "is_no_LLM": { "type": "INTEGER" },
                         "is_no_cds": { "type": "INTEGER" }
                     }
                 },
@@ -218,12 +218,14 @@ for_df_articles = [
     for item in all_results
 ]
 
+
+
 df = pd.json_normalize(for_df_articles)
 
 
 df["id"]= [list_articles[i][0] for i in range(len(list_articles))]
 
-
+df['inclusion_status'].value_counts()
 
 all_cols=['id'] + df.columns[:-1].tolist()
 df = df[all_cols]
