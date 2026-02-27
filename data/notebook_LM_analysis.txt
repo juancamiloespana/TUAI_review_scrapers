@@ -189,5 +189,43 @@
 "additionals": "The primary methodology used was **Iterative Prompt Optimization** based on a dynamic context and few-shot training, leveraging the pre-existing knowledge of the base LLM (GPT-4) without retraining. The evaluation metric ROUGE was calculated to compare model output against reference summaries (ground truth).",
 "Languages": "English."
 }---END---
+{
+  "paper_type": "(D) tool assessment. This is a Cross-Sectional Evaluation Study that aims to evaluate the efficiency, accuracy, and cost of LLMs in handling complex medical cases as tools for clinical decision support.",
+  "num_decisions": "89",
+  "clinical_decisions": "Clinical decision/Decision recommendation, Diagnosis, Treatment",
+  "clinical_process_map": "Cardiothoracic Surgery -> Clinical decision support for complex cases.",
+  "medical_specialty": "Multiple.",
+  "paper_aim": "(A) assess performance/metrics. The study aims to evaluate the efficiency, accuracy, and cost of LLMs in handling complex medical cases.",
+  "support_type": "(C) a recommendation for the clinician. The LLMs provide complete decision recommendations and are intended to serve as auxiliary tools to provide reference advice to clinical medical experts.",
+  "additional_ai_tools": "Transformer architecture, artificial intelligence (AI), deep learning technologies.",
+  "data_source": "Private/real data. Cases were sourced from the complex case database of the Department of Cardiothoracic Surgery of the Third Affiliated Hospital of Sun Yat-sen University (2021‐2024).",
+  "regulations_country": "China. Specific AI regulations are not mentioned.",
+  "regulation_domain": "not_mentioned",
+  "results_performance": "Promising. LLMs significantly surpassed experts in efficiency and cost reduction. In terms of accuracy, Deepseek-R1 and GPTo1 performed best and achieved decision levels comparable to that of human experts.",
+  "identified_risks": "Biases and Hallucinations; Privacy and security concerns (patient data leakage, especially during data transmission for proprietary models); Potential misuse of LLMs and lack of supervision. Possible affected parties are patients.",
+  "identified_barriers": "Technical Limitations (Biases and hallucinations, incompleteness/bias in training knowledge base); Trust/Supervision (misuse, lack of supervision); Indirect Costs (equipment costs, model fine-tuning, and ethical oversight).",
+  "future_work": "Future studies should address: 1) External validation; 2) Integration into hospital information systems; 3) Adopting comprehensive evaluation frameworks (e.g., TRIPOD-LLM extension); 4) Systematic comparison of LLM reasoning styles; 5) Further validating the LLaMa3 series and Gemini models.",
+  "additionals": "Cross-Sectional Evaluation Study; Baseline comparison was the Multidisciplinary Team (MDT) discussion process; Evaluated seven specific LLM variants (Deepseek-R1, GPTo1, GPT-4o, Kimi, Gemini, LLaMA3-70B, and LLaMA3-8B); Noted the zero direct cost advantage of open-source models.",
+  "Languages": "NA"
+}---END---
+{
+  "paper_type": "(D) tool assessment. The study aimed to assess the performance of the GPT-4 large language model (LLM) in computation of the HEART score and prediction of 60-day major adverse cardiac events (MACE). This was conducted as a retrospective cohort study.",
+  "num_decisions": "2. The supported decision types are risk stratification and prediction of 60-day major adverse cardiac events (MACE).",
+  "clinical_decisions": "Risk stratification, Prediction/Prognosis, Clinical decision support",
+  "clinical_process_map": "Emergency Department (patient presentation concerning for ACS) -> Chest Pain Observation Unit -> HEART Score Computation/Risk Stratification",
+  "medical_specialty": "Emergency Medicine and Cardiovascular Medicine",
+  "paper_aim": "(A) assess performance/metrics. The goal was to assess the performance of the GPT-4 large language model (LLM) in computation of the HEART score and prediction of 60-day major adverse cardiac events (MACE).",
+  "support_type": "(B) info to support decision. The LLM performs automated risk score computation, which has the potential to facilitate clinical decision support.",
+  "additional_ai_tools": "A RoBERTa-based de-identification pipeline was used by the research team to remove protected health information from the notes.",
+  "data_source": "Private/real. The study used a retrospective cohort of actual patient data from de-identified chart documentation and an institutional registry from an urban, academic tertiary care center.",
+  "regulations_country": "HIPAA and United States (Yale University, Charlottesville, VA)",
+  "regulation_domain": "(A) medical AI. The regulations cited (HIPAA compliance, Yale University institutional review board (IRB) approval) specifically relate to handling patient data and medical research.",
+  "results_performance": "The LLM performance was similar to clinician performance (LLM agreement with adjudicators 0.67; APP agreement 0.66). No significant difference was seen in diagnostic performance (AUC) for MACE, and the study was not powered to detect non-inferiority.",
+  "identified_risks": "The main risks are the systematic differences from physician judgment. Specifically, the LLM systematically overestimated the HEART score (mean 5.06 vs. adjudicator mean 4.69). This conservative risk stratification may be more problematic in a lower risk population.",
+  "identified_barriers": "The implementation barrier is the dependence on timely availability of documents for the model to review, which may not be possible when real-time risk measurement is needed. Furthermore, there is low agreement on subjective components like History and ECG.",
+  "future_work": "Future work should include prospective investigation, inclusion of computer vision/multimodal frameworks to evaluate ECG images, inclusion of non-note sources (triage documentation, nursing flow sheets), and consideration of the recalibrated HEART score.",
+  "additionals": "The specific LLM used was GPT-4 (model ver: 1106-Preview). The methodology involved iterative prompt development leveraging established methods like chain-of-thought reasoning, focusing on extracting information from structured clinical text input (ED note, ECG interpretation, lab values, past history notes) to synthesize the score.",
+  "Languages": "English"
+}---END---
 
 
