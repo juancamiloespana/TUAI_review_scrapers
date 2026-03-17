@@ -10,12 +10,12 @@ from dotenv import load_dotenv
 from tqdm import tqdm
 
 
-##### Load environment variables ####
-load_dotenv()
+# ##### Load environment variables ####
+# load_dotenv()
 
-##### API Credentials ####
-ncbi_key = os.environ.get("NCBI_API_KEY")
-email = "camilo1260@gmail.com"
+# ##### API Credentials ####
+# ncbi_key = os.environ.get("NCBI_API_KEY")
+# email = "camilo1260@gmail.com"
 
 if not ncbi_key:
     print("ERROR: 'NCBI_API_KEY' not found.")

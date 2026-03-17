@@ -4,7 +4,7 @@ Its only job is to load configuration and start the scraper.
 """
 
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from scraper import PubMedScraper
 import config  # Imports all settings from our config.py file
 
@@ -15,7 +15,7 @@ def run():
     print("Starting the PubMed scraping script...")
     
     # 1. Load environment variables (like .env file)
-    load_dotenv()
+    #load_dotenv()
     
     # 2. Get credentials
     api_key = os.environ.get("NCBI_API_KEY")
