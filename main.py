@@ -1,6 +1,7 @@
 """
 This is the main entry point for the script.
 Its only job is to load configuration and start the scraper.
+Run this file to execute the full PubMed search and save pipeline.
 """
 
 import os
