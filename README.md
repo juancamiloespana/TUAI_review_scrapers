@@ -83,6 +83,8 @@ GEMINI_API_KEY=your_gemini_api_key
 - **NCBI API key**: Register at [NCBI](https://www.ncbi.nlm.nih.gov/account/) (increases rate limit from 3 to 10 requests/second)
 - **Gemini API key**: Obtain from [Google AI Studio](https://aistudio.google.com/)
 
+<!-- Test comment: README last reviewed 2026-03-18 -->
+
 ## Usage
 
 ### 1. Configure the search
